@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    height: 100%;
+    background-color: #65A0D3;
+    text-transform: capitalize;
+}
+
+.top-bar{
+    grid-area: top-bar;
+    background-color: #1c0175;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 260px 1fr 1fr;
+    grid-template-rows: 30px repeat(4,1fr);
+    height: 100%;
+    grid-template-areas: 
+    "top-bar top-bar top-bar top-bar top-bar"
+    "button-bar user-prompt user-prompt user-prompt score-combo"
+    "round-stats arrow-container arrow-container arrow-container ."
+    "round-stats arrow-container arrow-container arrow-container ."
+    ". records records records .";
+}
+
+.button-bar{
+    grid-area: button-bar;
+}
+
+.score-combo{
+    background-color:#65A0D3;
+    grid-area: score-combo;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+    justify-content: flex-end;
+}
+
+.score{
+    color: #1c0175;
+    font-size: 1.6rem;
+    justify-self: flex-start;
+    align-self: center;
+    background-color: #65A0D3;
+}
+
+.combo{
+    color: #1c0175;
+    font-size: 4rem;
+    font-weight: 800;
+    justify-self: flex-end;
+    align-self: center;
+    float:bottom;
+}
+
+.user-prompt{
+    background-color: #65A0D3;
+    grid-area: user-prompt;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    border-bottom: 2px solid black;
+    color: #1c0175;
+}
+
+.text-to-user{
+    align-self: flex-end;
+    font-size: 4rem;
+}
+
+.arrow-container{
+    background-color: #65A0D3;
+    grid-area: arrow-container;
+    text-align: center;
+    font-size: 4.2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.current-set{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.next-set{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+}
+
+.next-set img{
+    width: 10%;
+    opacity: 0.2;
+}
+
+img{
+    width: 10%;
+    border: 2px solid rgb(0,0,0,.8);
+    border-radius: 3px;
+    margin: 2px;
+}
+
+.button-bar{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button{
+    padding: 3px;
+    font-size: 1.3rem;
+    border: 2px solid #1c0175;
+    border-radius: 5px;
+    transition: .2s;
+    top: 0px;
+    margin: 10px;
+    max-width: 100px;
+}
+
+button:hover{
+    box-shadow: 3px 10px 10px 0px rgb(0,0,0,.3);
+}
+
+button:click{
+    background-color: rgba(211,141,101,0.7);
+}
+
+.records{
+    grid-area: records;
+    border-top: 2px dashed silver;
+    padding-top: 10px;
+    color: #1c0175;
+}
+
+.round-stats{
+    grid-area: round-stats;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.round-container{
+    padding-left: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-size: .9rem;
+    color: #1c0175;
+}
